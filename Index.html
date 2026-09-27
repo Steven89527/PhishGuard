@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>PhishGuard | Phishing Awareness</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+      
+        
+    </header>
+
+
+    <main>
+
+        <!-- START SCREEN -->
+
+        <section id="start-screen" class="screen">
+
+            <div class="hero-icon">🛡️</div>
+
+            <h1>Can You Spot the Phish?</h1>
+
+            <p>
+                Test your ability to identify suspicious emails
+                and learn the warning signs used in phishing attacks.
+            </p>
+
+            <div class="feature-row">
+
+                <div>
+                    <strong>8</strong>
+                    <span>Scenarios</span>
+                </div>
+
+                <div>
+                    <strong>⚡</strong>
+                    <span>Instant Feedback</span>
+                </div>
+
+                <div>
+                    <strong>🏆</strong>
+                    <span>Final Score</span>
+                </div>
+
+            </div>
+
+            <button class="start-button" onclick="startQuiz()">
+                Start Training →
+            </button>
+
+        </section>
+
+
+        <!-- QUIZ SCREEN -->
+
+        <section id="quiz-screen" class="screen hidden">
+
+            <div class="quiz-top">
+
+                <span id="question-number">
+                    Scenario 1 of 8
+                </span>
+
+                <span id="score-display">
+                    Score: 0
+                </span>
+
+            </div>
+
+
+            <div class="progress-container">
+
+                <div id="progress-bar"></div>
+
+            </div>
+
+
+            <div class="streak">
+                🔥 Streak: <span id="streak-display">0</span>
+            </div>
+
+
+            <div class="email-card">
+
+                <div class="email-top">
+
+                    <div class="email-icon">
+                        ✉️
+                    </div>
+
+                    <div>
+
+                        <p>
+                            <strong>From:</strong>
+                            <span id="email-sender">
+                                security@example.com
+                            </span>
+                        </p>
+
+                        <p>
+                            <strong>Subject:</strong>
+                            <span id="email-subject">
+                                Important Account Notice
+                            </span>
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="email-body">
+
+                    <p id="email-text"></p>
+
+                </div>
+
+            </div>
+
+
+            <h2>What do you think?</h2>
+
+
+            <div class="answer-buttons">
+
+                <button
+                    class="phishing-button"
+                    onclick="checkAnswer(true)">
+                    🚨 Phishing
+                </button>
+
+                <button
+                    class="legitimate-button"
+                    onclick="checkAnswer(false)">
+                    ✓ Legitimate
+                </button>
+
+            </div>
+
+
+            <div id="feedback" class="feedback hidden"></div>
+
+
+            <button
+                id="next-button"
+                class="next-button hidden"
+                onclick="nextQuestion()">
+
+                Next Scenario →
+
+            </button>
+
+        </section>
+
+
+        <!-- RESULTS SCREEN -->
+
+        <section id="results-screen" class="screen hidden">
+
+            <div class="results-icon">
+                🏆
+            </div>
+
+            <h1>Training Complete!</h1>
+
+            <div class="final-score" id="final-score"></div>
+
+            <div class="performance" id="performance-message"></div>
+
+            <div class="results-stats">
+
+                <div>
+                    <strong id="correct-count">0</strong>
+                    <span>Correct</span>
+                </div>
+
+                <div>
+                    <strong id="best-streak">0</strong>
+                    <span>Best Streak</span>
+                </div>
+
+            </div>
+
+            <button onclick="restartQuiz()">
+                🔄 Try Again
+            </button>
+
+        </section>
+
+    </main>
+
+
+  
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
