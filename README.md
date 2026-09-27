@@ -17,7 +17,7 @@ Download or clone this repository.
 Open "index.html" in a web browser.
 Click "Start Training" to begin the simulator.
 
-##How to Edit
+## How to Edit
 
 ### Email Scenarios
 
@@ -39,6 +39,6 @@ Open "index.html" to edit the text and structure of the website.
 -CSS
 -JavaScript
 
-##Purpose
+## Purpose
 
 This project was created as a cybersecurity education project to help people learn how to identify phishing emails.
